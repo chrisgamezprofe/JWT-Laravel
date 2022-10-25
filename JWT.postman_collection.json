@@ -1,0 +1,104 @@
+{
+	"info": {
+		"_postman_id": "217e1d7f-242d-4aa3-891f-571a98bf7254",
+		"name": "JWT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://jwt.test/api/user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vand0LnRlc3QvYXBpL2xvZ2luIiwiaWF0IjoxNjY2NzAyMDI2LCJleHAiOjE2NjY3MDU2MjYsIm5iZiI6MTY2NjcwMjAyNiwianRpIjoiT2F5Q0JiUTlWNFZ4bXV4MyIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.BARBdKDlLtWHSmAnfTwtKmg7sEm-Iig2X1rb56pid5c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vand0LnRlc3QvYXBpL2xvZ2luIiwiaWF0IjoxNjY2NzAwOTA2LCJleHAiOjE2NjY3MDQ1MDYsIm5iZiI6MTY2NjcwMDkwNiwianRpIjoiOE51cFpHU1BKZDdiSkVkVyIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.UFeApPoAEcY8l4dEcKHnWMOWZobdxiKFRuolp-_L-l0",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://jwt.test/api/user",
+					"protocol": "http",
+					"host": [
+						"jwt",
+						"test"
+					],
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://jwt.test/api/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\" : \"tutofox123\",\r\n    \"email\" : \"artyom@developer.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://jwt.test/api/login",
+					"protocol": "http",
+					"host": [
+						"jwt",
+						"test"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://jwt.test/api/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"artyom developer\",\r\n    \"password\" : \"tutofox123\",\r\n    \"password_confirmation\" : \"tutofox123\",\r\n    \"email\" : \"artyom@developer.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://jwt.test/api/register",
+					"protocol": "http",
+					"host": [
+						"jwt",
+						"test"
+					],
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
